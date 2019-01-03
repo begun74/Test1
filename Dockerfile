@@ -1,4 +1,5 @@
 FROM java:8
-ADD ./HelloWorld.java ./
+COPY HelloWorld.java /tmp/
+CMD ["cd", "/tmp"]
 RUN javac HelloWorld.java
 CMD ["java", "HelloWorld"]
